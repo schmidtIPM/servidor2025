@@ -16,7 +16,7 @@ services:
   backend:
     build:
       context: ./Backend
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     depends_on:
       - mysql
     environment:
@@ -35,7 +35,7 @@ services:
   frontend:
     build:
       context: ./Fronttend     
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     environment:
       URL: ${URL}
       PORT_FRONT: ${PORT_FRONT}
